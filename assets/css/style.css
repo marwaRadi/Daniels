@@ -1,0 +1,467 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #748182;
+  --header-color: #343434;
+  --circle-hover-color: #eee;
+  --circle-hover-background: #1c1c1c;
+  --background-section: #f7f7f7;
+  --light-color: #fff;
+  --span--color: #999999;
+}
+/* Global tags style */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--main-color);
+  font-size: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  color: var(--header-color);
+  font-weight: 900;
+}
+h6 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+img {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-size: 30px;
+  color: var(--light-color);
+  font-weight: 200;
+}
+ul {
+  list-style: none;
+}
+
+
+
+/* Global class style */
+.light__bg {
+  color: var(--header-color);
+  background-color: var(--background-section);
+}
+.dark__bg {
+  background-color: var(--header-color);
+  color: var(--background-section);
+}
+.circle__icon {
+  color: var(--header-color);
+  background-color: var(--background-section);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transition: background-color 0.5s, color 0.5s;
+}
+.bg__gray {
+  background-color: var(--background-section);
+}
+.header__color {
+  color: var(--header-color);
+}
+.title {
+  width: fit-content;
+  margin: auto;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-image: url(../image/dots.png);
+}
+
+.title h2 {
+  font-size: 40px;
+}
+/* ^=================== start header section ===================*/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.664)),
+    url(../image/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header h5 {
+  color: var(--light-color);
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  
+}
+header .social__icon {
+  margin-top: 30px;
+}
+header .social__icon .icon {
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 2px;
+}
+header .social__icon .icon i {
+  color: var(--light-color);
+  cursor: pointer;
+}
+.multiText{
+  font-weight:400 ;
+}
+
+
+/* ^ ================= start navbar ====================*/
+nav {
+  background: var(--light-color);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+.navbar-brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+/* button bar */
+.bar span {
+  background-color: var(--circle-hover-background);
+  display: inline-block;
+  height: 2px;
+  width: 22px;
+  margin: 2px 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+/* list style */
+.nav-pills .nav-link {
+  width: fit-content;
+  color: #111;
+  font-size: 13px;
+  padding: 0;
+}
+.nav-pills li {
+  padding: 15px 20px;
+}
+.nav-pills .nav-link {
+  font-size: 14px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: transparent;
+  position: relative;
+}
+
+.nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background-color: #222;
+  height: 2px;
+  transition: right 0.5s;
+}
+
+.nav-pills .nav-link.active.nav-link::after {
+  right: 0;
+}
+
+/* links center */
+.navbar-nav {
+  align-items: center;
+}
+
+/* ^ ================ start about section ================== */
+/* image area */
+.about__img {
+  padding-left: 30px;
+}
+
+.about__img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 80%;
+  height: 80%;
+  background-image: url(../image/dots.png);
+  z-index: -1;
+}
+/* caption area */
+.caption h3 {
+  font-weight: 800;
+  font-size: 30px;
+}
+.caption span {
+  letter-spacing: 2px;
+  color: var(--span--color);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.caption p {
+  font-size: 15px;
+}
+/* skill area */
+.progress__style {
+  background-color: var(--background-section);
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  height: 25px;
+  margin-bottom: 30px;
+}
+.progress-bar {
+  background-color: var(--circle-hover-background);
+  align-items: flex-start;
+  padding: 5px 10px;
+  border-radius: var(--bs-progress-border-radius);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-bar :is(h6, span),
+.btn a {
+  font-size: 13px;
+}
+.progress-bar span {
+  color: var(--light-color);
+}
+/* btn */
+.btn {
+  padding: 10px 30px;
+  margin-top: 15px;
+}
+.btn-dark {
+  --bs-btn-hover-bg: var(--light-color);
+  --bs-btn-hover-color: var(--circle-hover-background);
+}
+
+/* ^ =================== start service section ================== */
+.service__card {
+  padding: 50px 20px;
+  font-size: 14px;
+  -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+.service__card h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+.service__card p {
+  word-spacing: 2px;
+}
+.service__card .icon {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.service__card:hover .circle__icon , .contact__inf:hover .resize {
+  background-color: var(--circle-hover-background);
+  color: var(--circle-hover-color);
+}
+/* ^ ====================== start portfolio section =================== */
+.portfolio .nav {
+  justify-content: center;
+}
+.portfolio .nav .nav-link {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+}
+.portfolio .nav-pills .nav-link::after {
+  height: 3px;
+}
+
+/* image */
+.portfolio .portfolio__image figcaption,
+.card .card__img figcaption {
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.portfolio .portfolio__image:hover figcaption {
+  opacity: 0.9;
+  transform: translateY(0);
+}
+figcaption .icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #111;
+  transition: background-color 0.5s, color 0.5s;
+}
+figcaption .icons .icon i {
+  font-size: 14px;
+}
+figcaption .icons .icon:hover {
+  background-color: var(--background-section);
+  color: var(--header-color);
+}
+figcaption h5 {
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+/* ^ ====================== start Testimonials section ======================= */
+.carousel__img {
+  width: 90px;
+  height: 90px;
+}
+.Testimonials .carousel-caption :is(p, span) {
+  color: var(--main-color);
+  word-spacing: 2px;
+}
+.Testimonials .carousel-caption h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.Testimonials .carousel-caption span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d6d6d6;
+  border: 0;
+}
+.carousel-indicators .active {
+  background-color: #869791;
+}
+
+/* ^==================== start numbers section ======================= */
+.numbers__content :is(h3, i) {
+  font-size: 30px;
+}
+
+/* ^==================== start Team section ======================= */
+.card .card__img figcaption {
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.5s;
+  transform: rotateY(180deg) scale(0.1);
+}
+.card:hover figcaption {
+  transform: rotateY(0) scale(1);
+  opacity: 0.91;
+}
+.card .card__img img {
+  transition: transform 0.5s;
+}
+.card .card__img:hover img {
+  transform: scale(1.2);
+}
+.card-body {
+  background-color: rgba(52, 52, 52, 0.8);
+}
+.card-body h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.card-body h4{
+  font-size: 20px;
+}
+.card figure figcaption .icons .icon {
+  height: 40px;
+  width: 40px;
+  background-color: #111;
+}
+.card figure figcaption .icons .icon i {
+  font-size: 20px;
+}
+
+/* ^==================== start contact section ======================= */
+.contact__inf .resize{
+  width: 60px;
+  height: 60px;
+}
+.contact__inf .resize i{
+  font-size: 25px;
+}
+.contact__inf h5{
+  font-size: 15px;
+  font-weight: 700;
+}
+/* form area */
+.contact__form form  .change{
+    font-size: 14px;
+    background-color: var(--background-section);
+    border: none;
+    padding: 10px;
+}
+.change:focus{
+  color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color:none;
+
+    box-shadow: none;
+}
+.text__area{
+  height: 180px;
+}
+/* ^==================== start footer section ======================= */
+footer{
+  background-color: #1c1c1c;
+  font-size: 13px;
+}
+
+/* .moving{
+  width: fit-content;
+ 
+}
+.text{
+  width:100%;
+  border-right:5px solid black;
+  white-space:nowrap;
+  overflow:hidden;
+    animation: typing 3s 3s  infinite , cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+  50% {border-color :transparent}
+  
+}
+
+@keyframes typing {
+  from {width:0%}
+  to{width: 100%;}
+  from{width: 100%;}
+  to{width: 0%;}
+} */
+
